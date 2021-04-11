@@ -1,0 +1,198 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2021-04-11 19:47:54.992751",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "guest_id",
+  "guest_photo_attachment",
+  "company",
+  "column_break_7",
+  "posting_date",
+  "passport_no",
+  "cnic",
+  "contact_no",
+  "column_break_13",
+  "guest_name",
+  "guest_photo",
+  "booking_details_section",
+  "check_in",
+  "check_out",
+  "column_break_16",
+  "room_type",
+  "guest_count",
+  "section_break_17",
+  "status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "BCNF./.YY./.",
+   "print_hide": 1,
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "guest_id",
+   "fieldtype": "Link",
+   "label": "Guest ID",
+   "options": "Hotel Guests",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "guest_id.id_card_front_attachment",
+   "fieldname": "guest_photo_attachment",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Guest Photo Attachment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "print_hide": 1,
+   "remember_last_selected_value": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "now",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Booking Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "guest_id.passport_no",
+   "fieldname": "passport_no",
+   "fieldtype": "Data",
+   "label": "Passport No",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "guest_id.cnic",
+   "fieldname": "cnic",
+   "fieldtype": "Data",
+   "label": "CNIC",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "guest_id.contact_no",
+   "fieldname": "contact_no",
+   "fieldtype": "Data",
+   "label": "Contact No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "guest_id.guest_name",
+   "fieldname": "guest_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Guest Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.guest_photo_attachment",
+   "fieldname": "guest_photo",
+   "fieldtype": "HTML",
+   "in_preview": 1,
+   "label": "Guest Photo"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "options": "\nDraft\nBooked\nTo Check Out\nCompleted\nCancelled",
+   "print_hide": 1,
+   "read_only": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "check_in",
+   "fieldtype": "Datetime",
+   "label": "Check In",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Hotel Booking",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "booking_details_section",
+   "fieldtype": "Section Break",
+   "label": "Booking Details"
+  },
+  {
+   "fieldname": "check_out",
+   "fieldtype": "Datetime",
+   "label": "Check Out"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "room_type",
+   "fieldtype": "Link",
+   "label": "Room Type",
+   "options": "Room Type"
+  },
+  {
+   "fieldname": "guest_count",
+   "fieldtype": "Data",
+   "label": "Guest Count"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-04-11 21:33:27.057232",
+ "modified_by": "Administrator",
+ "module": "Hotel Management",
+ "name": "Hotel Booking",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

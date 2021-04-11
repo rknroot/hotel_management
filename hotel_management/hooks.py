@@ -13,7 +13,16 @@ app_license = "MIT"
 
 # Includes in <head>
 # ------------------
-
+fixtures = [{
+  'dt' : 'Custom Field', 'filters':[
+    [
+      'name', 'in', [
+        'Sales Invoice-check_in_id',
+        'Sales Invoice-check_in_date',
+      ]
+    ]
+  ]
+}, "Customer", "Hotel Management Settings"]
 # include js, css files in header of desk.html
 # app_include_css = "/assets/hotel_management/css/hotel_management.css"
 # app_include_js = "/assets/hotel_management/js/hotel_management.js"

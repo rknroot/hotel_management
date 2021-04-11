@@ -1,0 +1,305 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2020-01-29 14:57:03.679302",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "column_break_2",
+  "title",
+  "naming_series",
+  "hotel_booking",
+  "guest_id",
+  "guest_photo_attachment",
+  "check_in",
+  "company",
+  "column_break_7",
+  "posting_date",
+  "passport_no",
+  "cnic",
+  "contact_no",
+  "column_break_13",
+  "guest_name",
+  "guest_photo",
+  "booking_details_section",
+  "checkin",
+  "check_out",
+  "column_break_21",
+  "room_type",
+  "guest_count",
+  "room_details_section",
+  "rooms",
+  "total_amount",
+  "section_break_17",
+  "status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "options": "fa fa-user"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title",
+   "no_copy": 1,
+   "print_hide": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "CHK-IN./.YY./.",
+   "print_hide": 1,
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "hotel_booking.guest_id",
+   "fieldname": "guest_id",
+   "fieldtype": "Link",
+   "label": "Guest ID",
+   "options": "Hotel Guests",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "guest_id.id_card_front_attachment",
+   "fieldname": "guest_photo_attachment",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Guest Photo Attachment",
+   "read_only": 1
+  },
+  {
+   "default": "now",
+   "fieldname": "check_in",
+   "fieldtype": "Datetime",
+   "label": "Check In",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "print_hide": 1,
+   "remember_last_selected_value": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "now",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "guest_id.passport_no",
+   "fieldname": "passport_no",
+   "fieldtype": "Data",
+   "label": "Passport No",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "guest_id.cnic",
+   "fieldname": "cnic",
+   "fieldtype": "Data",
+   "label": "CNIC",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "guest_id.contact_no",
+   "fieldname": "contact_no",
+   "fieldtype": "Data",
+   "label": "Contact No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "guest_id.guest_name",
+   "fieldname": "guest_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Guest Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.guest_photo_attachment",
+   "fieldname": "guest_photo",
+   "fieldtype": "HTML",
+   "in_preview": 1,
+   "label": "Guest Photo"
+  },
+  {
+   "fieldname": "room_details_section",
+   "fieldtype": "Section Break",
+   "label": "Room Details"
+  },
+  {
+   "fieldname": "rooms",
+   "fieldtype": "Table",
+   "label": "Rooms",
+   "options": "Hotel Check In Room",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Total Amount",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "options": "\nDraft\nTo Check Out\nCompleted\nCancelled",
+   "print_hide": 1,
+   "read_only": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Hotel Check In",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "hotel_booking",
+   "fieldtype": "Link",
+   "label": "Hotel Booking",
+   "options": "Hotel Booking"
+  },
+  {
+   "fieldname": "booking_details_section",
+   "fieldtype": "Section Break",
+   "label": "Booking Details"
+  },
+  {
+   "fetch_from": "hotel_booking.check_in",
+   "fieldname": "checkin",
+   "fieldtype": "Datetime",
+   "label": "Check In",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "hotel_booking.check_out",
+   "fieldname": "check_out",
+   "fieldtype": "Datetime",
+   "label": "Check Out",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "hotel_booking.room_type",
+   "fieldname": "room_type",
+   "fieldtype": "Link",
+   "label": "Room Type",
+   "options": "Room Type",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "hotel_booking.guest_count",
+   "fieldname": "guest_count",
+   "fieldtype": "Data",
+   "label": "Guest Count",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-04-11 21:41:37.977077",
+ "modified_by": "Administrator",
+ "module": "Hotel Management",
+ "name": "Hotel Check In",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Master Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
