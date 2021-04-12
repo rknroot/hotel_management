@@ -8,7 +8,7 @@ get_indicator: function(doc) {
     return [__(doc.status), {
       "Draft": "red",
       "Booked": "blue",
-      "To Check Out": "orange",
+      "Checked In": "orange",
       "Completed": "green",
       "Cancelled": "red"
     }[doc.status], "status,=," + doc.status];

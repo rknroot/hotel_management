@@ -125,7 +125,7 @@
    "in_list_view": 1,
    "label": "Status",
    "no_copy": 1,
-   "options": "\nDraft\nBooked\nTo Check Out\nCompleted\nCancelled",
+   "options": "\nDraft\nBooked\nChecked In\nCompleted\nCancelled",
    "print_hide": 1,
    "read_only": 1,
    "reqd": 1,
@@ -173,7 +173,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2021-04-11 21:33:27.057232",
+ "modified": "2021-04-12 08:38:41.028594",
  "modified_by": "Administrator",
  "module": "Hotel Management",
  "name": "Hotel Booking",

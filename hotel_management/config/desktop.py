@@ -7,7 +7,7 @@ def get_data():
 		{
 			"module_name": "Hotel Management",
 			"color": "grey",
-			"icon": "octicon octicon-file-directory",
+			"icon": "fa fa-bed",
 			"type": "module",
 			"label": _("Hotel Management")
 		}
