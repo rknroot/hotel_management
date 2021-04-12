@@ -11,3 +11,10 @@ class HotelBooking(Document):
 		self.status = 'Booked'
 		doc = frappe.get_doc('Hotel Booking', self.name)
 		doc.db_set('status', 'Booked')
+
+@frappe.whitelist()
+def get_bookings(start, end, room):
+	booking_list = frappe.db.sql("""select check_in, check_out, room_no from `tabHotel Booking Rooms` 
+					where check_in = %s and check_out = %s and room_no = %s""", (start, end, room))
+	if booking_list:
+		frappe.throw("Selected Room not available")

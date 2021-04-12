@@ -87,7 +87,7 @@
   }
  ],
  "icon": "calender",
- "modified": "2021-04-11 21:43:15.115023",
+ "modified": "2021-04-12 19:27:06.522421",
  "modified_by": "Administrator",
  "module": "Hotel Management",
  "name": "Rooms",
@@ -140,7 +140,7 @@
    "share": 1
   }
  ],
- "search_fields": "room_type, room_status, price",
+ "search_fields": "room_type, price",
  "sort_field": "modified",
  "sort_order": "DESC",
  "track_changes": 1

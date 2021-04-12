@@ -18,11 +18,7 @@
   "guest_name",
   "guest_photo",
   "booking_details_section",
-  "check_in",
-  "check_out",
-  "column_break_16",
-  "room_type",
-  "guest_count",
+  "booking",
   "section_break_17",
   "status",
   "amended_from"
@@ -132,12 +128,6 @@
    "search_index": 1
   },
   {
-   "fieldname": "check_in",
-   "fieldtype": "Datetime",
-   "label": "Check In",
-   "reqd": 1
-  },
-  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -152,28 +142,14 @@
    "label": "Booking Details"
   },
   {
-   "fieldname": "check_out",
-   "fieldtype": "Datetime",
-   "label": "Check Out"
-  },
-  {
-   "fieldname": "column_break_16",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "room_type",
-   "fieldtype": "Link",
-   "label": "Room Type",
-   "options": "Room Type"
-  },
-  {
-   "fieldname": "guest_count",
-   "fieldtype": "Data",
-   "label": "Guest Count"
+   "fieldname": "booking",
+   "fieldtype": "Table",
+   "label": "Booking",
+   "options": "Hotel Booking Rooms"
   }
  ],
  "is_submittable": 1,
- "modified": "2021-04-12 08:38:41.028594",
+ "modified": "2021-04-12 19:12:44.333229",
  "modified_by": "Administrator",
  "module": "Hotel Management",
  "name": "Hotel Booking",

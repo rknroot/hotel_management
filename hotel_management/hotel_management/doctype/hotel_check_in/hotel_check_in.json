@@ -23,11 +23,6 @@
   "guest_name",
   "guest_photo",
   "booking_details_section",
-  "checkin",
-  "check_out",
-  "column_break_21",
-  "room_type",
-  "guest_count",
   "room_details_section",
   "rooms",
   "total_amount",
@@ -204,43 +199,10 @@
    "fieldname": "booking_details_section",
    "fieldtype": "Section Break",
    "label": "Booking Details"
-  },
-  {
-   "fetch_from": "hotel_booking.check_in",
-   "fieldname": "checkin",
-   "fieldtype": "Datetime",
-   "label": "Check In",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "hotel_booking.check_out",
-   "fieldname": "check_out",
-   "fieldtype": "Datetime",
-   "label": "Check Out",
-   "read_only": 1
-  },
-  {
-   "fieldname": "column_break_21",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fetch_from": "hotel_booking.room_type",
-   "fieldname": "room_type",
-   "fieldtype": "Link",
-   "label": "Room Type",
-   "options": "Room Type",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "hotel_booking.guest_count",
-   "fieldname": "guest_count",
-   "fieldtype": "Data",
-   "label": "Guest Count",
-   "read_only": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2021-04-11 21:41:37.977077",
+ "modified": "2021-04-12 09:37:16.486272",
  "modified_by": "Administrator",
  "module": "Hotel Management",
  "name": "Hotel Check In",
